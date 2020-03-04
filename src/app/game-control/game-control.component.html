@@ -1,0 +1,14 @@
+<div class="container">
+  <button class="btn btn-success"
+          (click)="onStartClicked()">Start</button>
+  <button class="btn btn-danger"
+          (click)="onStopClicked()">Stop</button>
+
+  <div class="row"
+       *ngFor="let counter of counterArray">
+       <app-odd *ngIf="counter % 2 !== 0"
+                [number]="counter"></app-odd>
+       <app-even *ngIf="counter % 2 === 0"
+                 [number]="counter"></app-even>
+  </div>
+</div>
